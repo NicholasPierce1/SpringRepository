@@ -23,6 +23,7 @@ import org.springframework.http.MediaType;
 public class MainController {
 
     private fakeData _fakeData;
+    private fakeData _favoriteAnimal;
 
     @GetMapping("/")
     public String index(Map<String, Object> model, ModelMap map){
@@ -76,4 +77,6 @@ public class MainController {
         map.addAttribute("age", personAge);
         return "confirmPost";
     }
+
+    
 }
