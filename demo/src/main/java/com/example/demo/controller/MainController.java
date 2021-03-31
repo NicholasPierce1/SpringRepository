@@ -46,6 +46,7 @@ public class MainController {
 
         System.out.println("test");
         map.addAttribute("test", "value");
+        map.addAttribute("color", "green");
         map.addAttribute("test1", null);
         System.out.println("12a".toUpperCase(Locale.ROOT));
 
@@ -151,12 +152,13 @@ public class MainController {
             for( ObjectError error : result.getAllErrors()) {
                 System.out.println(error.getDefaultMessage());
                 if(error instanceof FieldError){
+                    System.out.println("Field error");
                     System.out.println(((FieldError)error).getField());
                     System.out.println(((FieldError)error).getObjectName());
                     System.out.println(((FieldError)error).getDefaultMessage());
                 }
                 else{
-                    System.out.println(PREFIX + error.getObjectName());
+                    System.out.println("Object error");
                     System.out.println(PREFIX + error.getObjectName());
                     System.out.println(PREFIX + error.getDefaultMessage());
                     System.out.println(PREFIX + error.getCode());
