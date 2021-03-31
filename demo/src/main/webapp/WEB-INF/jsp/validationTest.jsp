@@ -18,7 +18,7 @@
     <label for="ownerName">Owner Name:</label><br>
     <select name="ownerName" id="ownerName">
         <option value="Nick">Nick</option>
-        <option value="Matthew">Loser</option>
+        <option value="Matthew">Matthew</option>
     </select> <br>
     <label for="yearsOwned">Years Owned:</label><br>
     <input type="number" id="yearsOwned" name="yearsOwned"><br><br>

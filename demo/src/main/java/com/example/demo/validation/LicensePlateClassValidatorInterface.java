@@ -34,9 +34,9 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
         Class<? extends Payload>[] payload() default { };
 
-        int value() default 22;
+        int age() default 22;
 
-        String myTestValue() default "Nick";
+        String Plate() default "AAA 444";
 
         @Target({ FIELD, METHOD, PARAMETER, ANNOTATION_TYPE })
         @Retention(RUNTIME)

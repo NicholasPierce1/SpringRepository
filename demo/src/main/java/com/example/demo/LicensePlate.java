@@ -7,7 +7,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.*;
 import com.example.demo.validation.*;
 
-@LicensePlateClassValidatorInterface(value = 22, myTestValue = "Nick")
+@LicensePlateClassValidatorInterface(age = 22, Plate = "AAA 444")
 public class LicensePlate {
 
     // demo class to show how custom validation can be applied to fields and classes
