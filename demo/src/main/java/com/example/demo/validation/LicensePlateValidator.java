@@ -47,7 +47,7 @@ public class LicensePlateValidator implements ConstraintValidator<CheckCase, Str
             constraintContext.buildConstraintViolationWithTemplate(
                     "{org.hibernate.validator.referenceguide.chapter03." +
                             "constraintvalidatorcontext.CheckCase.message}" +
-                            "you've done fucked up boi"
+                            "you've done made a mistake"
             )
                     .addConstraintViolation();
         }

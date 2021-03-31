@@ -12,14 +12,14 @@ public class LicensePlateClassValidator implements ConstraintValidator<LicensePl
 
     @Override
     public void initialize(LicensePlateClassValidatorInterface constraintAnnotation) {
-        this.yearsOwned = constraintAnnotation.value();
-        this.name = constraintAnnotation.myTestValue();
+        this.yearsOwned = constraintAnnotation.age();
+        this.name = constraintAnnotation.Plate();
     }
 
     @Override
     public boolean isValid(LicensePlate object, ConstraintValidatorContext constraintContext) {
         if ( object == null ) {
-            return true;
+            return false;
         }
         boolean isValid = false;
 
@@ -31,11 +31,12 @@ public class LicensePlateClassValidator implements ConstraintValidator<LicensePl
             constraintContext.buildConstraintViolationWithTemplate(
                     "{org.hibernate.validator.referenceguide.chapter03." +
                             "constraintvalidatorcontext.CheckCase.message}" +
-                            "you've done fucked up boi"
+                            "you've done messed up"
             )
                     .addConstraintViolation();
         }
-
+        System.out.println("Object: " + object.getYearsOwned() + "/" + object.getLicensePlate());
+        System.out.println("This:" + this.yearsOwned + "/" + this.name);
         return isValid;
     }
 }
